@@ -5,3 +5,7 @@ print(f'Length of list : {len(l1)}')
 #printing maximum and minimum item of list
 
 print(f'Maximum item : {max(l1)}\nMinimum item : {min(l1)}')
+
+print(f'Sum of list is : {sum(l1)}')
+
+print(f'Sorted list is : {sorted(l1)}')
