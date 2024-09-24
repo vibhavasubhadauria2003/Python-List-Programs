@@ -14,27 +14,22 @@ def inputMatrix(n):
             m0.append(x)
         m.append(m0)
     return m
-def matrixAdd(m1,m2,n):
-    add=[]
+def matrixTranspose(m,n):
+    trans=[]
     for i in range(n):
-        tem=[]
+        temp=[]
         for j in range(n):
-            tem.append(m1[i][j]+m2[i][j])
-        add.append(tem)
-    return add
+            temp.append(m[j][i])
+        trans.append(temp)
+    return trans
+        
 
 
+print("Enter matrix")
+m=inputMatrix(n)
+print("Matrix is")
+printMatrix(m)
+mTrans=matrixTranspose(m,n)
 
-print("Enter First matrix")
-m1=inputMatrix(n)
-print("Enter Second matrix")
-m2=inputMatrix(n)
-print("First matrix")
-printMatrix(m1)
-print("Second matrix")
-printMatrix(m2)
-
-mAdd=matrixAdd(m1,m2,n)
-
-print("Added matrix is")
-printMatrix(mAdd)
+print("Transposed matrix is")
+printMatrix(mTrans)
