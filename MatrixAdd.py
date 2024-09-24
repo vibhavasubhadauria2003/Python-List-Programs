@@ -2,7 +2,7 @@ n=int(input("Enter limit of squre matrix : "))
 def printMatrix(m):
     for item in m:
         for item1 in item:
-                    print(item1,end=" ")
+            print(item1,end=" ")
         print()
 def inputMatrix(n):
     m=[]

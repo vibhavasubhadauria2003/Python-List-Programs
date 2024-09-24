@@ -2,7 +2,7 @@ n=int(input("Enter limit of squre matrix : "))
 def printMatrix(m):
     for item in m:
         for item1 in item:
-                    print(item1,end=" ")
+            print(item1,end=" ")
         print()
 def inputMatrix(n):
     m=[]
@@ -19,7 +19,11 @@ def matrixMul(m1,m2,n):
     for i in range(n):
         temp=[]
         for j in range(n):
-            temp.append(m1[i][0]*m2[0][j]+m1[i][n-1]*m2[n-1][j])
+           # temp.append(m1[i][0]*m2[0][j]+m1[i][n-1]*m2[n-1][j])
+            sum=0
+            for k in range(n):
+                  sum+=m1[i][k]*m2[k][j]
+            temp.append(sum)
         mult.append(temp)
 
     return mult
