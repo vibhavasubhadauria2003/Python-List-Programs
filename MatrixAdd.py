@@ -23,7 +23,16 @@ def matrixAdd(m1,m2,n):
         add.append(tem)
     return add
 
-def matrixMul(m1,m2,n)
+def matrixMul(m1,m2,n):
+    mult=[]
+    for i in range(n):
+        temp=[]
+        for j in range(n):
+            temp.append(m1[i][0]*m2[0][j]+m1[i][n-1]*m2[n-1][j])
+        mult.append(temp)
+
+    return mult
+
 
 print("Enter First matrix")
 m1=inputMatrix(n)
@@ -38,3 +47,6 @@ mAdd=matrixAdd(m1,m2,n)
 
 print("Added matrix is")
 printMatrix(mAdd)
+print("Multiplied matrix is")
+mMult=matrixMul(m1,m2,n)
+printMatrix(mMult)
